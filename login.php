@@ -34,37 +34,37 @@ $kunci = "%^%ddmpt$";
       <li><a href="#">Daftar Wisata</a></li>
       <li><a href="#">Event and News</a></li>
        
-    <?php //Penangganan login jika form diisi 
-if(isset($_POST['account']) && isset($_POST['password']) ) 
-{ //cek isian 
-if(!empty($_POST['account']) && !empty($_POST['password']) ) 
+   
  
-{
+ 
+ 
+ <?php //Penangganan login jika form diisi 
+if(isset($_POST['email']) && isset($_POST['Password']) ) 
+{ //cek isian 
+if(!empty($_POST['email']) && !empty($_POST['Password']) ) 
+ 
 
-$account=$_POST['account']; 
-$password=$_POST['password']; 
+$email=$_POST['email']; 
+$Password=$_POST['Password']; 
 
-$myquery="select account, password from akun where account='$account' and password='$password' limit 1"; 
+$myquery="select email , Password from akun where email='$email' and Password='$Password' limit 1"; 
 $result=mysql_query($myquery) or die (mysql_error()); 
 if (mysql_num_rows($result) == 1) { 
-//jika account dan password cocok 
+//jika account dan Password cocok 
 
 
  $_SESSION['login']=true; 
- $_SESSION['uname']=$account;
- $_SESSION['pswd']=$password;
+ $_SESSION['uname']=$email;
+ $_SESSION['pswd']=$Password;
  
  header("location:halaman_utama.php");
  }
- 
- 
- 
- else { //jika username dan password tidak cocok 
+  else { //jika username dan password tidak cocok 
  echo "<h1 align=\"center\">Login Gagal!Coba lagi yaa</h1>"; }}  
  
  
 
- }
+ 
  else { //jika form kosong munculkan pesan 
  echo "<h1 align=\"center\">Whoops, masih kosong tuh!</h1>"; 
  }
@@ -79,23 +79,70 @@ if (mysql_num_rows($result) == 1) {
  <div id="FormLogin">
   <h1>LOGIN APLIKASI Explore Surabaya</h1>
   <form id="FLogin" name="FLogin" method="post" action="">
-    <label>Username</label>
-    :
+    <label>Email : </label>
+    <input name="email" type="text" id="email" size="50" maxlength="50" class="text">
+    <br>
+	<br>
+    <label>Password : </label>
+    <input name="Password" type="Password" id="Password" size="50" maxlength="50" class="text">
+    <br>
+	<br>
+	
+      <input type="submit" name="button" id="button" value="Login" />
+	  
+    </p>
+
+    <div class="clear"></div>
+  </div>
+</div>
+<br>
+<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+ <div id="FormRegister">
+ <h1>OR</h1>
+  <h1>REGISTER Explore Surabaya</h1>
+  <form id="FRegister" name="FRegister" method="post" action="register.php">
+    <label>Nama :</label>
     <input name="account" type="text" id="account" size="50" maxlength="50" class="text">
     <br>
 	<br>
-    <label>Password</label>
-    :
+	<label>Email :</label>
+    <input name="account" type="text" id="account" size="50" maxlength="50" class="text">
+    <br>
+	<br>
+    <label>Password :</label>
     <input name="password" type="password" id="password" size="50" maxlength="50" class="text">
     <br>
 	<br>
+	<label>Confirm Password :</label>
+    <input name="account" type="text" id="account" size="50" maxlength="50" class="text">
+    <br>
+	<br>
 	
-
-    
-	
-	
-      <input type="submit" name="button" id="button" value="Login" />
-      <input type="reset" name="Reset" id="button" value="Reset" />
+      <input type="submit" name="button" id="button" value="Create an Account" />
+	  
     </p>
 
     <div class="clear"></div>
