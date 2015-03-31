@@ -27,7 +27,7 @@ $kunci = "%^%ddmpt$";
   </div>
   <div id="menu">
     <ul>
-      <li id="current"><a href="halaman_utama.php">Beranda</a></li>
+      <li><a href="halaman_utama.php">Beranda</a></li>
       <li><a href="halaman_daftar_wisata.php">Daftar Wisata</a></li>
       <li><a href="halaman_eventnews.php">Event and News</a></li>
       
@@ -38,7 +38,7 @@ $kunci = "%^%ddmpt$";
     <ul class="sidemenu">
       <li><a href="museum.php">Museum</a></li>
       <li><a href="taman.php">Taman</a></li>
-      <li><a href="#alam.php">Wisata Alam</a></li>
+      <li><a href="alam.php">Wisata Alam</a></li>
       <li><a href="rekreasi.php">Taman Rekreasi</a></li>
       
     </ul>
@@ -50,43 +50,59 @@ $kunci = "%^%ddmpt$";
       <li><a href="#">>100.000</a></li>
     </ul>
     <h1>Lokasi</h1>
-	      <li><a href="#">Surabaya Pusat</a></li>
-		  <li><a href="#">Surabaya Tengah</a></li>
-		  <li><a href="#">Surabaya Timur</a></li>
-		  <li><a href="#">Surabaya Selatan</a></li>
-		  <li><a href="#">Surabaya Barat</a></li>
+	     <li><a href="pusat.php">Surabaya Pusat</a></li>
+		  <li><a href="tengah.php">Surabaya Tengah</a></li>
+		  <li><a href="timur.php">Surabaya Timur</a></li>
+		  <li><a href="selatan.php">Surabaya Selatan</a></li>
+		  <li><a href="barat.php">Surabaya Barat</a></li>
     
   </div>
-  <div id="main"> <a name="MostViewed"></a>
-    <h1>Most Viewed</h1>
+  <div id ="FInput">
+    
+    <h1>Input Data Ala Belajar Pintar PHP </h1>
+	 <form name="input" method="POST" action="inputdata.php">
+<tr>
+<td>Nama Tempat Wisata</td>
+<td><input type="text" name="nama"></td>
+</tr>
 <br>
- <table border='1' align='center'>
-            <tr><th>Nama</th><th>informasi</th><th>Harga</th></tr>
-           
-                <?php
-        
-                   // include 'koneksi.php';
-                    
-                    $query = "SELECT * FROM tempat_wisata ";
-                    $exe = mysql_query($query);
-                    $no = 1;
-                    while($row = mysql_fetch_assoc($exe)){
-                        
-                        $a = $row['nama_tempatwisata'];
-                        $b = $row['informasi_tempatwisata'];
-                        $c = $row['harga_tempatwisata'];
-                       
-                        
-                    echo "<tr><td>$no</td><td>$a</td><td>$b</td><td>$c</td></tr>";
-                    $no++;
-                    }
-                
-                ?>
-            
-        
-        </table>
+<tr>
+<td>Harga Tempat Wisata</td>
+<td><input type="text" name="harga"></td>
+ </tr>
+ <br>
+ <tr>
+ <td>Jenis Wisata</td>
+ <td><select name="jenis">
+<option>Museum</option>
+<option>Taman</option>
+<option>Alam</option>
+<option>Rekreasi</option>
+</select></td>
+</tr>
+<br>
+<tr>
+ <td>Lokasi Tempat Wisata</td>
+ <td><select name="lokasi">
+<option>Surabaya Pusat</option>
+<option>Surabaya Tengah</option>
+<option>Surabaya Selatan</option>
+<option>Surabaya Barat</option>
+<option>Surabaya Timur</option>
+</select></td>
+</tr>
+<br>
+<tr>
+<td>Informasi Tempat Wisata</td>
+<td><textarea cols="30" rows="5" name="info"></textarea></td>
+</tr>
+<tr>
+<input type="SUBMIT" name="button" id="button" value="input" />
+</form>
+</td>
+</tr>
     <p></p>
-    <p class="post-footer align-right"> <a href="#" class="readmore">Read more</a> <a href="#" class="comments">Comments ()</a> <span class="date">Oct 11, 2006</span> </p>
+    
     
     <br />
   </div>

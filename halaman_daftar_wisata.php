@@ -28,7 +28,8 @@ $kunci = "%^%ddmpt$";
   <div id="menu">
     <ul>
       <li><a href="halaman_utama.php">Beranda</a></li>
-      <li id="current"><a href="halaman_daftar_wisata.php">Daftar Wisata</a></li>
+      <li id="current
+	  "><a href="halaman_daftar_wisata.php">Daftar Wisata</a></li>
       <li><a href="halaman_eventnews.php">Event and News</a></li>
       
     </ul>

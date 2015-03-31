@@ -27,7 +27,7 @@ $kunci = "%^%ddmpt$";
   </div>
   <div id="menu">
     <ul>
-      <li id="current"><a href="halaman_utama.php">Beranda</a></li>
+      <li><a href="halaman_utama.php">Beranda</a></li>
       <li><a href="halaman_daftar_wisata.php">Daftar Wisata</a></li>
       <li><a href="halaman_eventnews.php">Event and News</a></li>
       
@@ -37,8 +37,8 @@ $kunci = "%^%ddmpt$";
     <h1>Jenis Wisata</h1>
     <ul class="sidemenu">
       <li><a href="museum.php">Museum</a></li>
-      <li><a href="taman.php">Taman</a></li>
-      <li><a href="#alam.php">Wisata Alam</a></li>
+      <liid="current"><a href="taman.php">Taman</a></li>
+      <li><a href="alam.php">Wisata Alam</a></li>
       <li><a href="rekreasi.php">Taman Rekreasi</a></li>
       
     </ul>
@@ -50,41 +50,16 @@ $kunci = "%^%ddmpt$";
       <li><a href="#">>100.000</a></li>
     </ul>
     <h1>Lokasi</h1>
-	      <li><a href="#">Surabaya Pusat</a></li>
-		  <li><a href="#">Surabaya Tengah</a></li>
-		  <li><a href="#">Surabaya Timur</a></li>
-		  <li><a href="#">Surabaya Selatan</a></li>
-		  <li><a href="#">Surabaya Barat</a></li>
+	      <li><a href="pusat.php">Surabaya Pusat</a></li>
+		  <li><a href="tengah.php">Surabaya Tengah</a></li>
+		  <li><a href="timur.php">Surabaya Timur</a></li>
+		  <li><a href="selatan.php">Surabaya Selatan</a></li>
+		  <li><a href="barat.php">Surabaya Barat</a></li>
     
   </div>
   <div id="main"> <a name="MostViewed"></a>
-    <h1>Most Viewed</h1>
-<br>
- <table border='1' align='center'>
-            <tr><th>Nama</th><th>informasi</th><th>Harga</th></tr>
-           
-                <?php
-        
-                   // include 'koneksi.php';
-                    
-                    $query = "SELECT * FROM tempat_wisata ";
-                    $exe = mysql_query($query);
-                    $no = 1;
-                    while($row = mysql_fetch_assoc($exe)){
-                        
-                        $a = $row['nama_tempatwisata'];
-                        $b = $row['informasi_tempatwisata'];
-                        $c = $row['harga_tempatwisata'];
-                       
-                        
-                    echo "<tr><td>$no</td><td>$a</td><td>$b</td><td>$c</td></tr>";
-                    $no++;
-                    }
-                
-                ?>
-            
-        
-        </table>
+    <h1>Museum</h1>
+    Kenjeran Park
     <p></p>
     <p class="post-footer align-right"> <a href="#" class="readmore">Read more</a> <a href="#" class="comments">Comments ()</a> <span class="date">Oct 11, 2006</span> </p>
     
